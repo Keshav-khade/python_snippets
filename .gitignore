@@ -1,0 +1,15 @@
+# Ignore build artifacts
+build/
+dist/
+
+# Ignore compiled / generated files
+python
+python.spec
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments (if any)
+venv/
+.env/
