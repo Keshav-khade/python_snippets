@@ -139,4 +139,3 @@ funcs = [
 value = [1,2,3]
 result = list(map(lambda f , v: f(v), funcs , value))
 print(result)
-
