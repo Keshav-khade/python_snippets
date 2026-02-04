@@ -40,3 +40,4 @@ def my_main(name):
     return "hello "+name
 
 print(my_main("kartik"))
+print(my_main.__closure__)

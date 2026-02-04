@@ -19,7 +19,7 @@ print(main_func("Kartik"))
 """
 
 """
-# wapper function is you actual main function that you want to modify.
+# wapper function is your actual main function that you want to modify.
 # when decorator have their own arguments you have to add another level or function which hold it's argument.
 # always remember while working with *args and **kwargs you have to unpack these data structures.
 # decorators are useful when you are working with many function that you have to modify back to back.

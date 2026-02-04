@@ -16,7 +16,7 @@ print(my_main(7))
 
 
 
-# if you use *args , **kwargs then your facing problem with tuple and dictionaries for that use can use this logic to unpack them
+# if you use *args , **kwargs then your facing problem with tuple and dictionaries for that can use this logic to unpack them
 '''
 def validate_positive(func):
     def wrapper(*args, **kwargs):
@@ -33,3 +33,17 @@ def validate_positive(func):
         return func(*args, **kwargs)
     return wrapper
 '''
+
+# here is the small snippet that will show you a use of decorator
+
+def decor(func):
+    def wrapper(num):
+        return func() + num
+    return wrapper
+
+@decor
+def num():
+    return 10
+print(num(3))
+
+
