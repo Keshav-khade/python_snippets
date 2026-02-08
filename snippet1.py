@@ -140,3 +140,139 @@ name = "john doe"
 # Expected → john.doe@gmail.com
 email = ".".join(name.split()) + "@gmail.com"
 print(email)
+
+# hide the middle name
+name = "kartik ratnakar khade"
+part = name.split() # now this is a list object
+part[1] = "*" * len(part[1])
+masked_name = " ".join(part)
+print(masked_name)
+
+"""
+# check given string is palindrome
+def palindrome(text):
+    if text == text[::-1]:
+        return True
+    else:
+        return False
+text = input("enter a text: ")
+print(palindrome(text))
+
+# another way to do this 
+text = input("enter a text:")
+palindrom = text == text[::-1]
+print(palindrom)
+
+"""
+
+# extract the last word of a sentence
+text = "I live in madhaya pradesh which is the heart of india"
+last_word = text.split()[-1]
+print(last_word)
+
+# another way to do this
+last_word = text.strip().split()[-1]
+"""
+text.strip().split()[-1]
+✔️ Removes leading/trailing junk
+✔️ Guarantees clean splitting
+✔️ Best practice in data cleaning
+
+strip()	    both ends
+lstrip()	left only
+rstrip()	right only
+
+
+last_word = text.strip().split()[-1]
+✔️ Handles:
+    file input
+    scraped text
+    user input
+    API responses
+✔️ Production-ready code
+"""
+print(last_word)
+
+"""
+👉 split() without arguments
+
+text.split()
+
+DOES NOT split on single spaces " "
+Instead, it splits on any whitespace and:
+
+✅ Automatically ignores
+
+leading spaces
+trailing spaces
+multiple spaces
+"""
+
+# finding a word greater than 5 characters
+text = "AI is revolutionizing every industry across the world"
+part = text.split()
+f_long = next((word for word in part if len(word)>5),"not found")
+print(f_long)
+
+
+# logs analysis
+# 🧪 Scenario 3: First keyword in text
+keywords = ["error", "failed", "timeout"]
+log = "request timeout after 30 seconds"
+found = next((k for k in keywords if k in log), None)
+print(found)
+
+# stop immediately when you catch first even number
+nums = [1, 3, 5, 5, 4]
+even = next((i for i in nums if i%2==0),-1)
+print(even)
+
+# extract every second element from the string
+text = "trees are play very crucial role in nature"
+words = text.split()
+s_words = words[::2]
+print(" ".join(s_words))
+
+# count the vowels in a sentences
+text = "I love to study python"
+count = 0
+vowel = "aeiou"
+for char in text:
+    if char.lower() in vowel:
+        count += 1
+print("total number of vowel is:{}".format(count))
+
+# mask any string with any given position
+ifsc = "MAHABANK0883"
+length = len(ifsc)
+mask = ""
+for i in range(length):
+    if i < length-4:
+        mask += "*"
+    else:
+        mask += ifsc[i]
+print(mask)    
+
+# removing all the duplicate characters
+text = "mississippi"
+result = ""
+for char in text:
+    if char not in result:
+        result += char
+print("without duplicate:{}".format(result))
+
+# capitalize the first letter of each sentence
+sentence = "python is fun.coding is great"
+
+# count the number of digits in a string
+my_phone = "6265289405"
+
+# convert snake case to title case
+snake = "python_programming_language"
+
+# check if a string is strong password or not
+password = "take anything as a password"
+
+# find and replace words without using .replace()
+paragraph = "take a paragraph"
+# replace "data" word with "info" all occurences
