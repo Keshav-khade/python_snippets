@@ -253,7 +253,7 @@ for i in range(length):
         mask += ifsc[i]
 print(mask)    
 
-# removing all the duplicate characters
+# removing all the duplicate characters , using this when order is important
 text = "mississippi"
 result = ""
 for char in text:
@@ -261,18 +261,83 @@ for char in text:
         result += char
 print("without duplicate:{}".format(result))
 
+# you can remove duplicate using set method also
+text1 = "mississippi"
+set1 = set(text1)
+print(set1)
+
+# if you want a counter with characters than you should use counter
+from collections import Counter
+s = "mississippi"
+g = Counter(s)
+print(g)
+
 # capitalize the first letter of each sentence
-sentence = "python is fun.coding is great"
+sentence = "python is great.coding is simple"
+lst = sentence.split(".")
+lst1 = []
+for i in lst:
+    lst1.append(i.strip().capitalize())
+print(lst1)
 
 # count the number of digits in a string
 my_phone = "6265289405"
+counter = 0
+for i in my_phone:
+    counter += 1
+print(counter)
+print(len(my_phone))
 
 # convert snake case to title case
 snake = "python_programming_language"
+lst = snake.split("_")
+lst1 = []
+for i in lst:
+    lst1.append(i.strip().capitalize())
+lst1 = "_".join(lst1)
+print(lst1)
 
 # check if a string is strong password or not
-password = "take anything as a password"
+password = input("Enter your password: ")
+
+special_chars = "!@#$%^&*()_+-=[]{}|;:',.<>?/"
+
+if len(password) < 8:
+    print("❌ Weak password: Minimum length should be 8")
+
+elif not any(ch.isupper() for ch in password):
+    print("❌ Weak password: At least one uppercase letter required")
+
+elif not any(ch.islower() for ch in password):
+    print("❌ Weak password: At least one lowercase letter required")
+
+elif not any(ch.isdigit() for ch in password):
+    print("❌ Weak password: At least one digit required")
+
+elif not any(ch in special_chars for ch in password):
+    print("❌ Weak password: At least one special character required")
+
+else:
+    print("✅ Strong password!")
+
 
 # find and replace words without using .replace()
-paragraph = "take a paragraph"
+text = "Python is fun. Python is powerful and Python is easy."
+
+replacements = {
+    "Python": "Java",
+    "fun.": "awesome."
+}
+
+words = text.split()
+result = []
+
+for word in words:
+    if word in replacements:
+        result.append(replacements[word])
+    else:
+        result.append(word)
+
+final_text = " ".join(result)
+print(final_text)
 # replace "data" word with "info" all occurences
