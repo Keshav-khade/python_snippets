@@ -84,3 +84,78 @@ for i in range(len(seq)//2):
     if seq[i] != seq[-(i+1)]:
         is_pal = False
 print(is_pal)
+
+# list comprehension and regular looping
+square = []
+for x in range(5):
+    square.append(x**2)
+print(square)
+
+# another way to do this
+square = [x**2 for x in range(5)]
+print(square)
+
+# multiply and same logic for another operators
+lst = [1,5,4,6,7,3,2]
+result = [i*2 for i in lst if i > 3]
+print(result)
+
+# formating the list values
+prices = [100,250,345,450]
+result = [format(p*1.1,".2f") for p in prices]
+print("updated_prices: ",result)
+
+# If the digit after rounding is exactly 5, Python rounds to the nearest EVEN number ,banker's rounding
+prices = [100,250,345,450]
+result = [round(p*1.1,3) for p in prices]
+print("updated_prices: ",result)
+
+prices = [99.99, 149.95, 249.5]
+updated = [round(p * 1.18, 2) for p in prices]
+print(updated)
+
+# difference between round() and formatting 
+value = 3.5
+print(round(value, 2))
+print(f"{value:.2f}")
+
+
+# formatting using f-strings
+prices = [10, 20, 30]
+formatted = [f"₹{p*1.075:.2f}" for p in prices]
+print(formatted)
+
+"""
+things to remember
+<5 → round down
+>5 → round up
+==5 → round to nearest EVEN number
+"""
+
+# names less than 3 words means short-names will be excluded
+names = ["ali","ravi","jo","kartik"]
+filtered = [n for n in names if len(n) > 3]
+print(filtered)
+
+# email validation
+emails = ["kartik@gamil.com","monu@gamil.com","maagamil.com","papa.gamil.com"]
+correct = [e for e in emails if "@" in e]
+print(correct)
+
+# apply prefix to generate id's
+nums = [64,65,70,66]
+id = ["DS0"+ str(n) for n in nums]
+print(id)
+
+# count survey data
+survey = ["yes", "no", "yes", "NO", "Yes", "YES"]
+true_list  = [v for v in survey if v.lower() == "yes"]
+false_list = [v for v in survey if v.lower() != "yes"]
+print("True:", true_list)
+print("False:", false_list)
+
+# other way to do this
+survey = ["yes", "no", "yes", "NO", "Yes", "YES"]
+classified = ["true" if v.lower() == "yes" else "false" for v in survey]
+print(classified)
+
