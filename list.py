@@ -159,3 +159,76 @@ survey = ["yes", "no", "yes", "NO", "Yes", "YES"]
 classified = ["true" if v.lower() == "yes" else "false" for v in survey]
 print(classified)
 
+# some list function and methods that we can use in our day to day tasks
+lst = [12,13,14,15]
+a = max(lst)
+print(a)
+
+lst = [12,13,14,15]
+a = min(lst)
+b = len(lst)
+print(a)
+print("length of this string is: ",b)
+
+lst = [4,2,3,1,5]
+new_lst = sorted(lst)
+print(new_lst)
+
+str1 = "banglore"
+lst = list(str1)
+print(lst)
+
+lst2 = [7,5,6,3,2,2]
+lst2.append(5)
+print(lst2)
+
+lst2 = [7,5,6,3,2,2]
+lst2.insert(2,7)
+print(lst2)
+
+lst1 = [1,2,3]
+lst2 = [4,5]
+lst1.extend(lst2)
+print(lst1,lst2)
+
+lst2 = [7,5,6,3,2,2]
+lst2.remove(2)
+print(lst2)
+
+lst2 = [7,5,6,3,2,2]
+a = lst2.pop()
+print(a)
+print(lst2)
+
+lst2 = [7,5,6,3,2,2]
+lst2.reverse()
+print(lst2)
+
+lst2 = [7,5,6,3,2,2]
+lst2.sort()
+print(lst2)
+
+lst2 = [7,5,6,3,2,2]
+lst2.clear()
+print(lst2)
+
+# add item to the grocery list
+lst = ["potato","tomoto","coliflower","chilli"]
+lst.append("sugar")
+lst.sort()
+lst.remove("coliflower")
+print(lst)
+
+# average max min of the students score
+scores = [78,98,85,76,92,90,87]
+avg = sum(scores) / len(scores)
+highest = max(scores)
+lowest = min(scores)
+print("average:{} , Highest:{} , Lowest:{}".format(avg,highest,lowest))
+
+# count the particular itme
+lst = ["apple","banana","mango","apple","orange"]
+times = lst.count("apple")
+print("count of your item is: ",times)
+
+"responses".count("e")
