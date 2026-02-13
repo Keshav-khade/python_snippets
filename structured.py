@@ -21,7 +21,7 @@ def itax(gross):
 	"itax is calculated at 10% on gross"
 	tax = gross*0.1
 	return tax
-
+"""
 # this is the main program
 # calculate the gross salary by taking info of basic salary
 basic = float(input("Enter your basic salary: "))
@@ -31,7 +31,7 @@ print("your gross salary: {:.2f}".format(gross_salary))
 # calculate the net salary
 net_salary = (gross_salary - pf(basic) - itax(gross_salary))
 print("your net salary: {:10.2f}".format(net_salary))
-
+"""
 # alignments basics
 """10   → total width
 .2   → 2 decimal places
@@ -47,3 +47,13 @@ print("{:10.2f}".format(num)) -> rounds up and aligned right by default
 | {:^10.2f}   | Center aligned          |
  
 """
+" we have succesffuly creating our module and use it"
+from employee import *
+
+basic = float(input("Enter your basic salary: "))
+# calculate the gross salary
+gross_salary = ( basic + da(basic) + hra(basic) )
+print("your gross salary: {:10.2f}".format(gross_salary))
+# calculate the net salary
+net_salary = (gross_salary - pf(basic) - itax(gross_salary))
+print("your net salary: {:10.2f}".format(net_salary))
