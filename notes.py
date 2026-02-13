@@ -79,5 +79,4 @@ print(s)
 # chain replacement
 text = "2025/02/03"
 text = text.replace("/", "-")
-
 print(text)
