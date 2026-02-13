@@ -48,6 +48,7 @@ print("{:10.2f}".format(num)) -> rounds up and aligned right by default
  
 """
 " we have succesffuly creating our module and use it"
+"rember using this it can not prevent when two different modules have same name-> This is called a namespace collision. This is generally NOT recommended in companies." 
 from employee import *
 
 basic = float(input("Enter your basic salary: "))
