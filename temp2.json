@@ -1,0 +1,26 @@
+[
+    {
+        "Empid": "100",
+        "Ename": "kartik",
+        "salary": "10000",
+        "deptid": "10"
+    },
+    {
+        "Empid": "200",
+        "Ename": "Keshav",
+        "salary": "20000",
+        "deptid": "20"
+    },
+    {
+        "Empid": "300",
+        "Ename": "Keshav",
+        "salary": "20000",
+        "deptid": "20"
+    },
+    {
+        "Empid": "400",
+        "Ename": "Keshav",
+        "salary": "20000",
+        "deptid": "20"
+    }
+]

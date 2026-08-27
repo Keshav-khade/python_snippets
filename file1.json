@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Keshav",
+        "marks": {
+            "english": 85,
+            "math": 90
+        }
+    },
+    {
+        "name": "eva",
+        "marks": {
+            "english": 85,
+            "math": 90
+        }
+    }
+]
